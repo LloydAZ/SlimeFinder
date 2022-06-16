@@ -2,12 +2,14 @@
   "schemaVersion": 1,
   "id": "slimefinder",
   "version": "${version}",
-  "name": "SlimeFinder",
-  "description": "",
+
+  "name": "SlimeFinder 1.18.1",
+  "description": "Slime Chunk Finder",
   "authors": [],
   "contact": {},
+
   "license": "MIT",
-  "icon": "assets/slimefinder/icon.png",
+
   "environment": "*",
   "entrypoints": {
     "client": [
@@ -20,9 +22,14 @@
   "mixins": [
     "slimefinder.mixins.json"
   ],
+
   "depends": {
-    "fabricloader": ">=0.10.8",
+    "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "1.16.4"
+    "minecraft": "1.18.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }

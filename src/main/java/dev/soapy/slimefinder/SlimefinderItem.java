@@ -10,24 +10,32 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.ChunkRandom;
+import net.minecraft.world.gen.random.ChunkRandom;
 
-public class SlimefinderItem extends Item {
-    public SlimefinderItem() {
+public class SlimefinderItem extends Item
+{
+    public SlimefinderItem()
+    {
         super(new FabricItemSettings().maxCount(1));
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(!world.isClient) {
+        if(!world.isClient)
+        {
             ChunkPos chunkPos = new ChunkPos(user.getBlockPos());
             boolean slimeChunk = ChunkRandom.getSlimeRandom(chunkPos.x, chunkPos.z, ((StructureWorldAccess)world).getSeed(), 987234911L).nextInt(10) == 0;
-            if(slimeChunk) {
+
+            if(slimeChunk)
+            {
                 user.sendMessage(new TranslatableText("item.slimefinder.yes"), false);
-            } else {
+            }
+            else
+            {
                 user.sendMessage(new TranslatableText("item.slimefinder.no"), false);
             }
         }
+
         return TypedActionResult.success(user.getStackInHand(hand));
     }
 }
