@@ -1,5 +1,6 @@
 package dev.soapy.slimefinder;
 
+import dev.soapy.slimefinder.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -13,7 +14,7 @@ public class Slimefinder implements ModInitializer
 
 	@Override
 	public void onInitialize() {
-		//LOGGER.info("Hello Fabric world!");
-		Registry.register(Registry.ITEM, new Identifier("slimefinder", "dowsing_rod"), new SlimefinderItem());
+		//Registry.register(Registry.ITEM, new Identifier("slimefinder", "dowsing_rod"), new SlimefinderItem());
+		ModItems.registerModItems();
 	}
 }
