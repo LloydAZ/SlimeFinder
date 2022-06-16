@@ -14,7 +14,6 @@ public class Slimefinder implements ModInitializer
 
 	@Override
 	public void onInitialize() {
-		//Registry.register(Registry.ITEM, new Identifier("slimefinder", "dowsing_rod"), new SlimefinderItem());
 		ModItems.registerModItems();
 	}
 }

@@ -16,10 +16,6 @@ public class SlimefinderItem extends Item
     public SlimefinderItem(Settings settings) {
         super(settings);
     }
-    //public SlimefinderItem()
-    //{
-    //    super(new FabricItemSettings().maxCount(1));
-    //}
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {

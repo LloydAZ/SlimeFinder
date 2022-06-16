@@ -1,10 +1,8 @@
 package dev.soapy.slimefinder.item;
 
 import dev.soapy.slimefinder.Slimefinder;
-import dev.soapy.slimefinder.item.SlimefinderItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
